@@ -1,4 +1,6 @@
 set -e
+echo "Updating required packages through requirements.txt"
+pip install -r requirements.txt
 
 echo "Attempting to run migations with python manage.py migrate"
 until python manage.py migrate; do
